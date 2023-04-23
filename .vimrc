@@ -19,6 +19,9 @@ set wrap
 " Backup
 set nobackup
 
+" Delay
+set updatetime=100
+
 " Indentation
 filetype indent on	" Turns on autoindent based on filetype
 set autoindent 		" Auto indentation
@@ -51,16 +54,21 @@ vnoremap <C-y> "*y
 " Quit
 nnoremap <leader>fq :q!<cr>
 
+" Colorscheme
+let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_sign_column = 'bg0'
+colo gruvbox
+
 " Auto Indentation
 autocmd BufWritePre *.js :normal gg=G``
 
 " Sh templet
 autocmd BufNewFile *.sh :normal i#! /bin/bash
 
-" Airline Themes
-let g:airline_theme='bubblegum'
-
 " Airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'default'
+
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
@@ -76,6 +84,9 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = '  '
 let g:airline_symbols.maxlinenr = ' ☰ '
 let g:airline_symbols.dirty='⚡'
+
+" Airline Themes
+let g:airline_theme='gruvbox'
 
 " DevIcons
 let g:webdevicons_conceal_nerdtree_brackets = 1
