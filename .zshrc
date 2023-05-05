@@ -120,8 +120,7 @@ export PAGER="most"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Aliases
-alias bvim=/usr/local/bin/vim
+alias vim=/usr/local/bin/vim
 alias ogvim=/usr/bin/vim
-alias vim=/usr/bin/vim
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
