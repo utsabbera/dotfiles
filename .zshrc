@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$PATH:$HOME/bin:/usr/local/bin:$HOME/go/bin
+export PATH=$PATH:$HOME/bin:/usr/local/bin:$HOME/go/bin:$HOME/flutter/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -125,17 +125,28 @@ export PAGER="most"
 # Aliases
 alias vim=/usr/local/bin/vim
 alias ogvim=/usr/bin/vim
-alias ds="devbox shell"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 alias java8="export PATH=/usr/local/opt/openjdk@8/bin:$PATH"
 alias java11="export PATH=/usr/local/opt/openjdk@11/bin:$PATH"
+alias java17="export PATH=/usr/local/opt/openjdk@17/bin:$PATH"
 
-java11
+java17
 
 export CPPFLAGS="-I/usr/local/opt/openjdk@8/include"
 export CPPFLAGS="-I/usr/local/opt/openjdk@11/include"
 
 # Direnv
 eval "$(direnv hook zsh)"
+
+# Ruby
+eval "$(rbenv init - zsh)"
+
+# GPG
+export GPG_TTY=$(tty)
+
+# Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
