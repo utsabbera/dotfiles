@@ -151,6 +151,11 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+
+# Autocompletions
+autoload -U compinit; compinit
+orb completion zsh > $(brew --prefix)/share/zsh/site-functions/_orb # orbstack
+
 # iterm shell integration
 iterm2_print_user_vars() {
   iterm2_set_user_var gitBranch $((git branch 2> /dev/null) | grep \* | cut -c3-)
