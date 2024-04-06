@@ -110,32 +110,15 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Zsh Syntax-highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Zsh Autosuggestions
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# Plugins
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Default pager
 export PAGER="most"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Aliases
-alias vim=/usr/local/bin/vim
-alias ogvim=/usr/bin/vim
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-alias java8="export PATH=/usr/local/opt/openjdk@8/bin:$PATH"
-alias java11="export PATH=/usr/local/opt/openjdk@11/bin:$PATH"
-alias java17="export PATH=/usr/local/opt/openjdk@17/bin:$PATH"
-
-java17
-
-export CPPFLAGS="-I/usr/local/opt/openjdk@8/include"
-export CPPFLAGS="-I/usr/local/opt/openjdk@11/include"
 
 # Direnv
 eval "$(direnv hook zsh)"
@@ -156,7 +139,7 @@ eval "$(pyenv init -)"
 autoload -U compinit; compinit
 orb completion zsh > $(brew --prefix)/share/zsh/site-functions/_orb # orbstack
 
-# iterm shell integration
+# Iterm shell integration
 iterm2_print_user_vars() {
   iterm2_set_user_var gitBranch $((git branch 2> /dev/null) | grep \* | cut -c3-)
   iterm2_set_user_var rabbitRepo $(pwd | grep -o "rabbit-[^/]*")
@@ -164,3 +147,5 @@ iterm2_print_user_vars() {
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+# P10k
+source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
