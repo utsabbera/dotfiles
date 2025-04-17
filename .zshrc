@@ -6,7 +6,12 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$PATH:/opt/homebrew/bin:$HOME/bin:/usr/local/bin:$HOME/go/bin:$HOME/flutter/bin
+export PATH=$HOME/bin:/usr/local/bin:$HOME/go/bin:$HOME/flutter/bin:/opt/homebrew/bin:$PATH
+
+# Java
+export PATH=/opt/homebrew/opt/openjdk@17/bin:$PATH
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk@17/include"
+export JAVA_HOME="/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -149,3 +154,15 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # P10k
 source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
+
+# Android SDK
+ANDROID_HOME="$HOME/android_sdk"
+
+# fzf
+eval "$(fzf --zsh)"
+. "/Users/utsabbera/.deno/env"
+
+# Antigen
+source /opt/homebrew/share/antigen/antigen.zsh
+antigen use oh-my-zsh
+antigen bundle deno
