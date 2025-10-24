@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$HOME/go/bin:$HOME/flutter/bin:/opt/homebrew/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$HOME/go/bin:$HOME/flutter/bin:/opt/homebrew/bin:$PATH
 
 # Java
 export PATH=/opt/homebrew/opt/openjdk@17/bin:$PATH
@@ -17,7 +17,11 @@ export JAVA_HOME="/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home
 export ZSH="$HOME/.oh-my-zsh"
 
 # Figlet
-figlet Utsab
+# figlet Utsab
+echo "
+█░█ █▀▀ █░░ █░░ █▀█
+█▀█ ██▄ █▄▄ █▄▄ █▄█
+"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -141,8 +145,9 @@ eval "$(pyenv init -)"
 
 
 # Autocompletions
-autoload -U compinit; compinit
-orb completion zsh > $(brew --prefix)/share/zsh/site-functions/_orb # orbstack
+# autoload -U compinit; compinit
+# orb completion zsh > $(brew --prefix)/share/zsh/site-functions/_orb # orbstack
+# NOTE: Disabled because of error: .zshrc:145: operation not permitted: /opt/homebrew/share/zsh/site-functions/_orb
 
 # Iterm shell integration
 iterm2_print_user_vars() {
@@ -160,9 +165,8 @@ ANDROID_HOME="$HOME/android_sdk"
 
 # fzf
 eval "$(fzf --zsh)"
-. "/Users/utsabbera/.deno/env"
 
 # Antigen
-source /opt/homebrew/share/antigen/antigen.zsh
-antigen use oh-my-zsh
-antigen bundle deno
+# source /opt/homebrew/share/antigen/antigen.zsh
+# antigen use oh-my-zsh
+# antigen bundle deno
