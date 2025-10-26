@@ -1,0 +1,66 @@
+{
+  "files.autoSave": "onFocusChange",
+  "editor.fontFamily": "JetBrainsMono Nerd Font, Menlo, Monaco, 'Courier New', monospace",
+  "terminal.integrated.scrollback": 10000000000,
+  "editor.formatOnSave": true,
+  "dart.flutterSdkPath": "/Users/utsabbera/flutter",
+  "editor.minimap.sectionHeaderFontSize": 16,
+  "scratchpads.autoPaste": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": ["--path-mode=abs", "--fast-only"],
+  "go.formatTool": "custom",
+  "go.alternateTools": {
+    "customFormatter": "golangci-lint"
+  },
+  "go.formatFlags": ["fmt", "--stdin"],
+  "go.lintOnSave": "workspace",
+  "go.testFlags": ["--timeout=300s", "-v", "-cover", "-count=1"],
+
+  "editor.minimap.enabled": false,
+  "go.toolsManagement.autoUpdate": true,
+  "gopls": {
+    "ui.semanticTokens": true
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "typescript": false
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "mssql.enableRichExperiences": true,
+  "database-client.autoSync": true,
+  "editor.rulers": [120],
+  "workbench.iconTheme": "material-icon-theme",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.chat.codesearch.enabled": true,
+  "github.copilot.chat.generateTests.codeLens": true,
+  "github.copilot.selectedCompletionModel": "",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.autofetch": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "makefile.configureOnOpen": true,
+  "github.copilot.chat.terminalChatLocation": "terminal",
+  "inlineChat.lineEmptyHint": true,
+  "todo-tree.general.showActivityBarBadge": true,
+  "todo-tree.general.statusBar": "total",
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "[ ]",
+    "[x]",
+    "REFACTOR"
+  ],
+  "claudeCode.useTerminal": true
+}

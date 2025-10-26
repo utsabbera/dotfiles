@@ -1,0 +1,112 @@
+[
+  {
+    "key": "shift+cmd+f",
+    "command": "editor.action.formatDocument",
+    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+  },
+  {
+    "key": "shift+alt+f",
+    "command": "-editor.action.formatDocument",
+    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+  },
+  {
+    "key": "shift+alt+cmd+f",
+    "command": "workbench.action.findInFiles"
+  },
+  {
+    "key": "shift+cmd+f",
+    "command": "-workbench.action.findInFiles"
+  },
+  {
+    "key": "shift+alt+cmd+f",
+    "command": "workbench.action.terminal.searchWorkspace",
+    "when": "terminalFocus && terminalProcessSupported && terminalTextSelected"
+  },
+  {
+    "key": "shift+cmd+f",
+    "command": "-workbench.action.terminal.searchWorkspace",
+    "when": "terminalFocus && terminalProcessSupported && terminalTextSelected"
+  },
+  {
+    "key": "shift+alt+cmd+f",
+    "command": "workbench.view.search",
+    "when": "workbench.view.search.active && neverMatch =~ /doesNotMatch/"
+  },
+  {
+    "key": "shift+cmd+f",
+    "command": "-workbench.view.search",
+    "when": "workbench.view.search.active && neverMatch =~ /doesNotMatch/"
+  },
+  {
+    "key": "ctrl+alt+cmd+n",
+    "command": "workbench.action.files.newUntitledFile"
+  },
+  {
+    "key": "cmd+n",
+    "command": "-workbench.action.files.newUntitledFile"
+  },
+  {
+    "key": "cmd",
+    "command": "welcome.showNewFileEntries"
+  },
+  {
+    "key": "ctrl+alt+cmd+n",
+    "command": "-welcome.showNewFileEntries"
+  },
+  {
+    "key": "shift+alt+cmd+n",
+    "command": "workbench.action.newWindow"
+  },
+  {
+    "key": "shift+cmd+n",
+    "command": "-workbench.action.newWindow"
+  },
+  {
+    "key": "shift+cmd+n",
+    "command": "explorer.newFolder"
+  },
+  {
+    "key": "cmd+n",
+    "command": "explorer.newFile"
+  },
+  {
+    "key": "ctrl+shift+d",
+    "command": "extension.js-debug.createDebuggerTerminal"
+  },
+  {
+    "key": "ctrl+cmd+]",
+    "command": "editor.emmet.action.balanceOut"
+  },
+  {
+    "key": "ctrl+cmd+[",
+    "command": "editor.emmet.action.balanceIn"
+  },
+  {
+    "key": "ctrl+cmd+\\",
+    "command": "editor.emmet.action.wrapWithAbbreviation"
+  },
+  {
+    "key": "ctrl+'",
+    "command": "editor.emmet.action.matchTag"
+  },
+  {
+    "key": "cmd+d cmd+c",
+    "command": "workbench.action.debug.selectDebugConsole"
+  },
+  {
+    "key": "cmd+d cmd+s",
+    "command": "workbench.action.debug.selectDebugSession"
+  },
+  {
+    "key": "shift+cmd+t",
+    "command": "go.toggle.test.file"
+},
+{
+    "key": "shift+enter",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+        "text": "\\\r\n"
+    },
+    "when": "terminalFocus"
+}
+]
