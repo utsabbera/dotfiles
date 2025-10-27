@@ -3,7 +3,7 @@
 [gpg "ssh"]
 	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 [commit]
-	gpgsign = true
+	gpgsign = false
 [user]
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFx/IjcX4xPQVRLblSH8yl47PBl+0cUTMLWk9zl2THvS
 	name = Utsab Bera

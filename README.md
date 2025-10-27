@@ -31,16 +31,17 @@ My personal macOS configuration files and setup scripts.
 
 ```bash
 # 1. Clone this repository
-git clone https://github.com/yourusername/dotfiles.git ~/.dotfiles
+git clone https://github.com/utsabbera/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 
 # 2. Run the installation script
 ./install.sh
 
-# 3. Install Homebrew packages
+# 3. Install Homebrew packages (optional)
 brew bundle install
 
-# 4. Restart your terminal
+# 4. Restart your terminal or source your shell config
+source ~/.zshrc
 ```
 
 ### What the Install Script Does
@@ -60,16 +61,16 @@ Some applications require manual configuration import:
 ### iTerm2
 1. Open iTerm2 → Preferences → General → Preferences
 2. Check "Load preferences from a custom folder or URL"
-3. Set to: `/path/to/dotfiles/iterm2`
+3. Set to: `~/.dotfiles/iterm2`
 4. Restart iTerm2
 
 ### Raycast
 1. Open Raycast → Settings → Advanced → Import/Export
-2. Import from: `raycast/raycast.rayconfig`
+2. Import from: `~/.dotfiles/raycast/raycast.rayconfig`
 
 ### Keychron Keyboard
 1. Open Keychron Launcher software
-2. Import `keyboard/keychron_k3_pro_config_basic.json`
+2. Import `~/.dotfiles/keyboard/keychron_k3_pro_config_basic.json`
 
 ## Making Changes
 
@@ -101,8 +102,11 @@ To remove symlinks and restore backups:
 
 ```bash
 # Manual removal
-rm ~/.zshrc ~/.zprofile ~/.gitconfig
-# ... etc
+rm ~/.zshrc ~/.p10k.zsh ~/.vimrc ~/.gitconfig ~/.ssh/config
+rm -rf ~/.config/gh ~/.config/git
+rm ~/Library/Application\ Support/Code/User/settings.json
+rm ~/Library/Application\ Support/Code/User/keybindings.json
+rm ~/.claude/settings.json ~/.claude/CLAUDE.md
 
 # Restore from backup
 cp -r ~/.dotfiles-backup-TIMESTAMP/* ~/

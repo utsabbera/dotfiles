@@ -1,4 +1,7 @@
 {
   "apiKeyHelper": "op read 'op://Thoughtworks/Anthropic API Key - Claude Code/credential'",
-  "alwaysThinkingEnabled": false
+  "enabledPlugins": {
+    "testing-suite@claude-code-templates": true
+  },
+  "alwaysThinkingEnabled": true
 }
