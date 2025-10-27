@@ -84,7 +84,6 @@ chmod 600 "$HOME/.ssh/config" 2>/dev/null || true
 info "Installing GitHub CLI configurations..."
 mkdir -p "$HOME/.config/gh"
 create_symlink "$DOTFILES_DIR/gh/config.yml" "$HOME/.config/gh/config.yml"
-create_symlink "$DOTFILES_DIR/gh/hosts.yml" "$HOME/.config/gh/hosts.yml"
 
 info "Installing VSCode configurations..."
 VSCODE_USER_DIR="$HOME/Library/Application Support/Code/User"
