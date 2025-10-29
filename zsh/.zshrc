@@ -133,15 +133,15 @@ export PAGER="most"
 eval "$(direnv hook zsh)"
 
 # Ruby
-eval "$(rbenv init - zsh)"
+# eval "$(rbenv init - zsh)"
 
 # GPG
 export GPG_TTY=$(tty)
 
 # Pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
 
 
 # Autocompletions

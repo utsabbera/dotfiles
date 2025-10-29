@@ -38,7 +38,7 @@
     "when": "workbench.view.search.active && neverMatch =~ /doesNotMatch/"
   },
   {
-    "key": "ctrl+alt+cmd+n",
+    "key": "cmd+n",
     "command": "workbench.action.files.newUntitledFile"
   },
   {
@@ -66,7 +66,7 @@
     "command": "explorer.newFolder"
   },
   {
-    "key": "cmd+n",
+    "key": "alt+n",
     "command": "explorer.newFile"
   },
   {
@@ -100,13 +100,13 @@
   {
     "key": "shift+cmd+t",
     "command": "go.toggle.test.file"
-},
-{
+  },
+  {
     "key": "shift+enter",
     "command": "workbench.action.terminal.sendSequence",
     "args": {
-        "text": "\\\r\n"
+      "text": "\\\r\n"
     },
     "when": "terminalFocus"
-}
+  }
 ]

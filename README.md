@@ -72,6 +72,40 @@ Some applications require manual configuration import:
 1. Open Keychron Launcher software
 2. Import `~/.dotfiles/keyboard/keychron_k3_pro_config_basic.json`
 
+### Git Configuration
+
+The main `.gitconfig` uses conditional includes to support separate work and personal configurations. You need to create these files in your home directory:
+
+#### Personal Configuration (optional)
+If you want to override any settings for personal projects:
+
+```bash
+cat > ~/.gitconfig-personal << 'EOF'
+[user]
+	email = your-personal-email@example.com
+
+[commit]
+	gpgsign = false
+EOF
+```
+
+#### Work Configuration (required for work directories)
+Create `~/.gitconfig-work` for work-specific settings:
+
+```bash
+cat > ~/.gitconfig-work << 'EOF'
+[user]
+	email = your-work-email@company.com
+
+[commit]
+	gpgsign = false
+EOF
+```
+
+The main gitconfig will automatically use work settings for any repository in `~/tw/` directory. Adjust the path in `.gitconfig` if your work directory is different.
+
+**Note:** These files are excluded from the repository via `.gitignore` to keep personal/work email addresses private.
+
 ## Making Changes
 
 Since configs are symlinked, you can edit them in place:

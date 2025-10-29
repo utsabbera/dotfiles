@@ -62,5 +62,6 @@
     "[x]",
     "REFACTOR"
   ],
-  "claudeCode.useTerminal": true
+  "claudeCode.useTerminal": true,
+  "python.defaultInterpreterPath": "/opt/homebrew/bin/python3"
 }

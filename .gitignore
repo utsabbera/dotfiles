@@ -31,3 +31,8 @@ claude/config.json
 
 # Local overrides
 *.local
+
+# Personal/work-specific git configurations
+git/.gitconfig-personal
+git/.gitconfig-work
+.gitconfig-work
