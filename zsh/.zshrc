@@ -13,6 +13,9 @@ export PATH=/opt/homebrew/opt/openjdk@17/bin:$PATH
 export CPPFLAGS="-I/opt/homebrew/opt/openjdk@17/include"
 export JAVA_HOME="/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home"
 
+# Google Cloud SDK
+export PATH="/opt/homebrew/share/google-cloud-sdk/bin:$PATH"
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -170,3 +173,7 @@ eval "$(fzf --zsh)"
 # source /opt/homebrew/share/antigen/antigen.zsh
 # antigen use oh-my-zsh
 # antigen bundle deno
+
+
+# Added by Antigravity
+export PATH="/Users/utsabbera/.antigravity/antigravity/bin:$PATH"

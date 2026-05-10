@@ -1,3 +1,15 @@
+" Plugins
+call plug#begin('~/.vim/plugged')
+
+Plug 'sainnhe/sonokai'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'preservim/nerdtree'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'ryanoasis/vim-devicons'
+
+call plug#end()
+
 " ESC alternative
 inoremap jk <esc>
 
@@ -78,7 +90,7 @@ colorscheme sonokai
 " autocmd BufWritePre *.js :normal gg=G``
 
 " Sh templet
-autocmd BufNewFile *.sh :normal i#! /bin/bash
+autocmd BufNewFile *.sh :normal i#! /bin/bash
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
